@@ -384,7 +384,8 @@ void C2SoftAacEnc::process(
         / mNumBytesPerInputFrame;
     ALOGV("capacity = %zu; mInputSize = %zu; numFrames = %zu "
           "mNumBytesPerInputFrame = %u inputTS = %lld remaining = %zu",
-          capacity, mInputSize, numFrames, mNumBytesPerInputFrame, inputTimestampUs.peekll(),
+          capacity, mInputSize, numFrames,
+          mNumBytesPerInputFrame, work->input.ordinal.timestamp.peekll(),
           mRemainderLen);
 
     std::shared_ptr<C2LinearBlock> block;
